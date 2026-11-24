@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-ojas-cream: #FAF8F3;
+  --color-ojas-linen: #F2EFE6;
+  --color-ojas-stone: #E5DEC9;
+  --color-ojas-forest: #163024;
+  --color-ojas-emerald: #1B4332;
+  --color-ojas-gold: #B88A3B;
+  --color-ojas-gold-light: #D4AF63;
+  --color-ojas-ink: #1C241F;
+  --color-ojas-muted: #525E56;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #FAF8F3;
+    color: #1C241F;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  body * {
+    visibility: hidden !important;
+  }
+  .ojas-print-invoice,
+  .ojas-print-invoice * {
+    visibility: visible !important;
+  }
+  .ojas-print-invoice {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    padding: 24px !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border: none !important;
+    z-index: 99999 !important;
+    overflow: visible !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+

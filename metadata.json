@@ -1,0 +1,6 @@
+{
+  "name": "OJAS — Pure by Nature",
+  "description": "Natural Products, Better Life. Luxury Indian natural apothecary featuring OJAS Egg Shell Powder and Artisanal Designer Candles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
